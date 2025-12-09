@@ -1,0 +1,85 @@
+openapi: 3.0.4
+info:
+  title: Data Masking
+  description: Data Masking is a powerful tool for detecting and masking sensitive information in text. It can identify and redact emails, phone numbers, SSNs, credit cards, IP addresses, URLs, and dates.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/datamasking:
+    post:
+      summary: Mask Sensitive Data
+      description: Data Masking is a powerful tool for detecting and masking sensitive information in text. It can identify and redact emails, phone numbers, SSNs, credit cards, IP addresses, URLs, and dates.
+      operationId: datamasking
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  masked: Contact John Doe at [EMAIL] or call [PHONE]. His SSN is [SSN].
+                  detected:
+                    email: 1
+                    phone: 1
+                    ssn: 1
+                    credit_card: 0
+                    ip_address: 0
+                    url: 0
+                    date: 0
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                  description: The text containing sensitive data to mask
+                  example: Contact John Doe at john.doe@email.com or call 555-123-4567. His SSN is 123-45-6789.
+                types:
+                  type: array
+                  description: 'Array of data types to mask (default: all types)'
+                  default: '["email","phone","ssn","credit_card","ip_address","url","date"]'
+              required:
+              - text
+              example:
+                text: Contact John Doe at john.doe@email.com or call 555-123-4567. His SSN is 123-45-6789.
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
