@@ -1,23 +1,26 @@
 openapi: 3.0.4
 info:
   title: Data Masking
-  description: Data Masking is a powerful tool for detecting and masking sensitive information in text. It can identify and redact emails, phone numbers, SSNs, credit cards, IP addresses, URLs, and dates.
+  description: >-
+    Data Masking is a powerful tool for detecting and masking sensitive
+    information in text. It can identify and redact emails, phone numbers, SSNs,
+    credit cards, IP addresses, URLs, and dates.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/datamasking:
     post:
       summary: Mask Sensitive Data
-      description: Data Masking is a powerful tool for detecting and masking sensitive information in text. It can identify and redact emails, phone numbers, SSNs, credit cards, IP addresses, URLs, and dates.
+      description: Detect and mask sensitive information in text
       operationId: datamasking
       parameters: []
       responses:
@@ -35,13 +38,15 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                  masked: Contact John Doe at [EMAIL] or call [PHONE]. His SSN is [SSN].
+                  masked: >-
+                    Contact John Doe at [EMAIL] or call [PHONE]. His SSN is
+                    [SSN].
                   detected:
                     email: 1
                     phone: 1
@@ -55,7 +60,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -66,15 +71,11 @@ paths:
                 text:
                   type: string
                   description: The text containing sensitive data to mask
-                  example: Contact John Doe at john.doe@email.com or call 555-123-4567. His SSN is 123-45-6789.
                 types:
-                  type: array
+                  type: string
                   description: 'Array of data types to mask (default: all types)'
-                  default: '["email","phone","ssn","credit_card","ip_address","url","date"]'
               required:
-              - text
-              example:
-                text: Contact John Doe at john.doe@email.com or call 555-123-4567. His SSN is 123-45-6789.
+                - text
 components:
   securitySchemes:
     api_key:
@@ -82,4 +83,8 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  text: >-
+    Contact John Doe at john.doe@email.com or call 555-123-4567. His SSN is
+    123-45-6789.
