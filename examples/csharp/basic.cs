@@ -20,7 +20,7 @@ namespace APIVerve.Examples
         private static readonly string API_URL = "https://api.apiverve.com/v1/datamasking";
 
         /// <summary>
-        /// Make a POST request to the Data Masking API
+        /// Make a GET request to the Data Masking API
         /// </summary>
         static async Task<JsonDocument> CallDataMaskingAPI()
         {
@@ -29,13 +29,7 @@ namespace APIVerve.Examples
                 using var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("x-api-key", API_KEY);
 
-                // Request body
-                var requestBody &#x3D; new { text &#x3D; &quot;Contact John Doe at john.doe@email.com or call 555-123-4567. His SSN is 123-45-6789.&quot; };
-
-                var jsonContent = JsonSerializer.Serialize(requestBody);
-                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-
-                var response = await client.PostAsync(API_URL, content);
+                var response = await client.GetAsync(API_URL);
 
                 // Check if response is successful
                 response.EnsureSuccessStatusCode();
