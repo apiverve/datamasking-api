@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:datamasking-api:1.1.13'
+    implementation 'com.github.apiverve:datamasking-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ DataMaskingAPIClient client = new DataMaskingAPIClient("YOUR_API_KEY");
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "Contact John at john.doe@email.com or call 555-123-4567");
+    parameters.put("text", "Contact John Doe at john.doe@email.com or call 555-123-4567. His SSN is 123-45-6789.");
     parameters.put("types", new ArrayList<>());
 
     // Execute the request
