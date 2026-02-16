@@ -225,8 +225,9 @@ from apiverve_datamasking.apiClient import DatamaskingAPIClient
 
 api = DatamaskingAPIClient("[YOUR_API_KEY]")
 
+query = { "text": "Contact John Doe at john.doe@email.com or call 555-123-4567. His SSN is 123-45-6789." }
+
 try:
-    query = { "text": "Contact John Doe at john.doe@email.com or call 555-123-4567. His SSN is 123-45-6789." }
     result = api.execute(query)
     print(result)
 finally:
