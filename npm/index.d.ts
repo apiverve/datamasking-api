@@ -4,27 +4,39 @@ declare module '@apiverve/datamasking' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface datamaskingResponse {
     status: string;
     error: string | null;
     data: DataMaskingData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface DataMaskingData {
-      masked:   string;
+      masked:   null | string;
       detected: Detected;
   }
   
   interface Detected {
-      email:      number;
-      phone:      number;
-      ssn:        number;
-      creditCard: number;
-      ipAddress:  number;
-      url:        number;
-      date:       number;
+      email:      number | null;
+      phone:      number | null;
+      ssn:        number | null;
+      creditCard: number | null;
+      ipAddress:  number | null;
+      url:        number | null;
+      date:       number | null;
   }
 
   export default class datamaskingWrapper {
