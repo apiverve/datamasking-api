@@ -20,6 +20,6 @@ namespace APIVerve.API.DataMasking
         /// Array of data types to mask (default: all types)
         /// </summary>
         [JsonProperty("types")]
-        public string Types { get; set; }
+        public List<string>? Types { get; set; }
     }
 }
