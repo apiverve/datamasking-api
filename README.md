@@ -197,11 +197,37 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Data Masking API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "masked": "Contact John Doe at [EMAIL] or call [PHONE]. His SSN is [SSN].",
+    "detected": {
+      "email": 1,
+      "phone": 1,
+      "ssn": 1,
+      "credit_card": 0,
+      "ip_address": 0,
+      "url": 0,
+      "date": 0
+    }
+  }
 }
 ```
 
