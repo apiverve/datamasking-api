@@ -25,6 +25,9 @@ namespace APIVerve.API.DataMasking
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -39,24 +42,36 @@ namespace APIVerve.API.DataMasking
     public partial class Detected
     {
         [JsonProperty("email")]
-        public long Email { get; set; }
+        public long? Email { get; set; }
 
         [JsonProperty("phone")]
-        public long Phone { get; set; }
+        public long? Phone { get; set; }
 
         [JsonProperty("ssn")]
-        public long Ssn { get; set; }
+        public long? Ssn { get; set; }
 
         [JsonProperty("credit_card")]
-        public long CreditCard { get; set; }
+        public long? CreditCard { get; set; }
 
         [JsonProperty("ip_address")]
-        public long IpAddress { get; set; }
+        public long? IpAddress { get; set; }
 
         [JsonProperty("url")]
-        public long Url { get; set; }
+        public long? Url { get; set; }
 
         [JsonProperty("date")]
-        public long Date { get; set; }
+        public long? Date { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
