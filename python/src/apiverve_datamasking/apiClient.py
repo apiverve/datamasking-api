@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -24,7 +24,7 @@ class ValidationError(DatamaskingAPIClientError):
 class DatamaskingAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
-        "text": {"type": "string", "required": True},
+        "text": {"type": "string", "required": True, "maxLength": 50000},
         "types": {"type": "array", "required": False, "default": "[\"email\",\"phone\",\"ssn\",\"credit_card\",\"ip_address\",\"url\",\"date\"]"}
     }
 
