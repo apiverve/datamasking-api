@@ -1,13 +1,13 @@
-# [Data Masking API](https://apiverve.com/marketplace/datamasking?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Data Masking API](https://apiverve.com/marketplace/datamasking?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Data Masking is a powerful tool for detecting and masking sensitive information in text. It can identify and redact emails, phone numbers, SSNs, credit cards, IP addresses, URLs, and dates.
+Data Masking redacts sensitive data like emails, phone numbers, payment cards, IP addresses, and dates using placeholder tokens. It returns the sanitized string and detection counts for each pattern found.
 
 The Data Masking API provides a simple, reliable way to integrate data masking functionality into your applications. Built for developers who need production-ready data masking capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/datamasking?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/datamasking?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/datamasking?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/datamasking?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-POST-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -167,7 +167,7 @@ go get github.com/apiverve/datamasking-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Data Masking API](https://apiverve.com/marketplace/datamasking?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Data Masking API](https://apiverve.com/marketplace/datamasking?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/datamasking](https://docs.apiverve.com/ref/datamasking)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -235,7 +235,7 @@ A real response from the Data Masking API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Data Masking API](https://apiverve.com/marketplace/datamasking?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Data Masking API](https://apiverve.com/marketplace/datamasking?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

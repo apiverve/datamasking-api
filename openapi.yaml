@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: Data Masking
   description: >-
-    Data Masking is a powerful tool for detecting and masking sensitive
-    information in text. It can identify and redact emails, phone numbers, SSNs,
-    credit cards, IP addresses, URLs, and dates.
+    Data Masking redacts sensitive data like emails, phone numbers, payment
+    cards, IP addresses, and dates using placeholder tokens. It returns the
+    sanitized string and detection counts for each pattern found.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/datamasking:
     post:
-      summary: Mask Sensitive Data
+      summary: Data Masking
       description: Detect and mask sensitive information in text
       operationId: datamasking
       parameters: []
