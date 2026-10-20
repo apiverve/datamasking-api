@@ -30,7 +30,7 @@ class datamaskingWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/datamasking';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"text":{"type":"string","required":true},"types":{"type":"array","required":false,"default":"[\"email\",\"phone\",\"ssn\",\"credit_card\",\"ip_address\",\"url\",\"date\"]"}};
+        this.validationRules = {"text":{"type":"string","required":true,"maxLength":50000},"types":{"type":"array","required":false,"default":"[\"email\",\"phone\",\"ssn\",\"credit_card\",\"ip_address\",\"url\",\"date\"]"}};
     }
 
     /**
