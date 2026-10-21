@@ -1,6 +1,6 @@
 # Data Masking API - PHP Package
 
-Data Masking is a powerful tool for detecting and masking sensitive information in text. It can identify and redact emails, phone numbers, SSNs, credit cards, IP addresses, URLs, and dates.
+Data Masking redacts sensitive data like emails, phone numbers, payment cards, IP addresses, and dates using placeholder tokens. It returns the sanitized string and detection counts for each pattern found.
 
 ## Installation
 
@@ -93,11 +93,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/datamasking?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/datamasking?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/datamasking?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/datamasking?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/datamasking?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/datamasking?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License

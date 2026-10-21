@@ -1,7 +1,7 @@
 {
     "name": "apiverve/datamasking",
-    "description": "Data Masking is a powerful tool for detecting and masking sensitive information in text. It can identify and redact emails, phone numbers, SSNs, credit cards, IP addresses, URLs, and dates.",
-    "version": "1.2.0",
+    "description": "Data Masking redacts sensitive data like emails, phone numbers, payment cards, IP addresses, and dates using placeholder tokens. It returns the sanitized string and detection counts for each pattern found.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "datamasking",
-        "data masking",
-        "pii",
-        "sensitive data",
-        "data redaction",
-        "privacy"
+        "data masking api",
+        "api data masking",
+        "pii masking api",
+        "data redaction api",
+        "mask sensitive data"
     ],
-    "homepage": "https://apiverve.com/marketplace/datamasking?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/datamasking?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/datamasking",
