@@ -1,7 +1,7 @@
 {
     "name": "apiverve/datamasking",
     "description": "Data Masking redacts sensitive data like emails, phone numbers, payment cards, IP addresses, and dates using placeholder tokens. It returns the sanitized string and detection counts for each pattern found.",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "type": "library",
     "license": "MIT",
     "authors": [
