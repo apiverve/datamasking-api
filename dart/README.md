@@ -1,11 +1,11 @@
 # Data Masking API - Dart/Flutter Client
 
-Data Masking is a powerful tool for detecting and masking sensitive information in text. It can identify and redact emails, phone numbers, SSNs, credit cards, IP addresses, URLs, and dates.
+Data Masking redacts sensitive data like emails, phone numbers, payment cards, IP addresses, and dates using placeholder tokens. It returns the sanitized string and detection counts for each pattern found.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_datamasking.svg)](https://pub.dev/packages/apiverve_datamasking)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Data Masking API](https://apiverve.com/marketplace/datamasking?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Data Masking API](https://apiverve.com/marketplace/datamasking?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_datamasking: ^1.1.14
+  apiverve_datamasking: ^1.2.3
 ```
 
 Then run:
@@ -68,12 +68,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [Data Masking API](https://apiverve.com/marketplace/datamasking?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/datamasking](https://docs.apiverve.com/ref/datamasking?utm_source=dart&utm_medium=readme)
+- **API Home:** [Data Masking API](https://apiverve.com/marketplace/datamasking?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/datamasking](https://docs.apiverve.com/ref/datamasking?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -81,4 +81,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)

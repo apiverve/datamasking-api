@@ -46,10 +46,10 @@ final _formatPatterns = {
 
 /// Data Masking API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/datamasking?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/datamasking?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [text] (required) - The text containing sensitive data to mask
+/// * [text] (required) - The text containing sensitive data to mask [maxLength: 50000]
 /// * [types] - Array of data types to mask (default: all types)
 class DatamaskingClient {
   final String apiKey;
@@ -58,7 +58,7 @@ class DatamaskingClient {
 
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
-    'text': ValidationRule(type: 'string', required: true),
+    'text': ValidationRule(type: 'string', required: true, maxLength: 50000),
     'types': ValidationRule(type: 'array', required: false),
   };
 
