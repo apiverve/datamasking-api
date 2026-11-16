@@ -50,7 +50,7 @@ final _formatPatterns = {
 ///
 /// Parameters:
 /// * [text] (required) - The text containing sensitive data to mask [maxLength: 50000]
-/// * [types] - Array of data types to mask (default: all types)
+/// * [types] - Array of data types to mask (default: all types). Allowed values: email, phone, ssn, credit_card, ip_address (IPv4 and IPv6), url, date; any other value returns a 400
 class DatamaskingClient {
   final String apiKey;
   final String baseUrl;
