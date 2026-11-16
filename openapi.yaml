@@ -73,7 +73,10 @@ paths:
                   description: The text containing sensitive data to mask
                 types:
                   type: string
-                  description: 'Array of data types to mask (default: all types)'
+                  description: >-
+                    Array of data types to mask (default: all types). Allowed
+                    values: email, phone, ssn, credit_card, ip_address (IPv4 and
+                    IPv6), url, date; any other value returns a 400
               required:
                 - text
 components:
